@@ -21,6 +21,91 @@
                 </ol>
                 <button data-bind="click: loadMessage">Load Message</button>
             </fieldset>
+            <fieldset>
+                <legend>Select (string array)</legend>
+                <ol>
+                    <li>
+                        <select data-bind="options: colors, optionsCaption: 'Select a Color', value: color"></select>
+                    </li>
+                    <li>
+                        <div data-bind="text: color" class="output"></div>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Select (object array, select object)</legend>
+                <ol>
+                    <li>
+                        <select data-bind="options: keyValuePairs, oprtionsCaption: 'Select an Object', optionsText: function(i){return i.Key}, value: keyValuePair"></select>
+                    </li>
+                    <li>
+                        <div data-bind="text: keyValuePair() ? keyValuePair().Value : ''" class="output"></div>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Select (object array, select object property)</legend>
+                <ol>
+                    <li>
+                        <select data-bind="options: keyValuePairs, oprtionsCaption: 'Select an Object', optionsText: 'Key', optionsValue: 'Value', value: ordinal"></select>
+                    </li>
+                    <li>
+                        <div data-bind="text: ordinal" class="output"></div>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Multi-Select</legend>
+                <ol>
+                    <li>
+                        <select size="6" multiple="multiple" data-bind="options: colors, selectedOptions: chosenColors"></select>
+                    </li>
+                    <li>
+                        <div class="output">
+                            <ul data-bind="foreach: chosenColors">
+                                <li data-bind="text: $data"></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Radio buttons</legend>
+                <ol>
+                    <li>
+                        <!-- ko foreach: colors -->
+                        <input type="radio" name="color" data-bind="value: $data, checked: $parent.color" />
+                        <label data-bind="text: $data" class="checkbox"></label>
+                        <br />
+                        <!-- /ko -->
+                    </li>
+                    <li>
+                        <div data-bind="text: color" class="output"></div>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Checkboxes</legend>
+                <ol>
+                    <li>
+                        <input type="checkbox" data-bind="checked: isChecked" />
+                    </li>
+                    <li>
+                        <div data-bind="text: isChecked" class="output"></div>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Submit</legend>
+                <form data-bind="submit: showMessage">
+                    <ol>
+                        <li>
+                            <input type="text" data-bind="textInput: message" />
+                        </li>
+                    </ol>
+                    <input type="submit" value="Show message"/>
+                </form>
+            </fieldset>
         </div>
     </div>
     <script src="Scripts/jquery-3.3.1.min.js"></script>
