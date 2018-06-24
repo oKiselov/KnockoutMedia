@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <link href="Content/Site.css" rel="stylesheet" />
-    <title>My Media Catalog</title>
+    <title>Manage Media</title>
 </head>
 <body>
     <div class="layout">
@@ -13,32 +13,36 @@
                 <li><a href="media.html">Media</a></li>
                 <li><a href="borrowers.html">Borrowers</a></li>
             </ul>
-            <h1>My Media Catalog</h1>
+            <h1>Manage Media</h1>
             <table>
                 <thead>
                     <tr>
-                        <th>Type</th>
+                        <th>ISBN</th>
+                        <th>MediaType</th>
                         <th>Name</th>
                     </tr>
                 </thead>
                 <tbody data-bind="foreach: catalog">
-                    <tr data-bind="style: {'font-weight': MediaType === 'Book' ? 'bold' : 'normal'}, css: {digital: $.inArray(MediaType, ['CD', 'DVD','Game']) > -1}">
-                        <td data-bind="text: MediaType"></td>
-                        <td data-bind="text: Name, attr:{title: ISBN}"></td>
+                    <tr>
+                        <td><input type="text" data-bind="enable: false, value: ISBN" /></td>
+                        <td><select data-bind="options: $parent.mediaTypes, optionsText: 'Name', optionsValue: 'Name', optionsCaption: 'Select a Media Type', value: MediaType"></select></td>
+                        <td><input type="text" data-bind="textInput: Name" /></td>
                     </tr>
                 </tbody>
             </table>
+            <p>
+                <input type="button" data-bind="click:save" value="Save"/>
+            </p>
         </div>
     </div>
     <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script src="Scripts/knockout-3.4.2.js"></script>
     <script src="Scripts/DataContext.js"></script>
     <script src="Scripts/Models/Media.js"></script>
-    <script src="Scripts/ViewModels/DefaultViewModel.js"></script>
+    <script src="Scripts/ViewModels/MediaViewModel.js"></script>
     <script>
         $(document).ready(function () {
-            app.DefaultViewModel.init();
-            ko.applyBindings(app.DefaultViewModel);
+            ko.applyBindings(app.MediaViewModel);
         });
     </script>
 </body>
