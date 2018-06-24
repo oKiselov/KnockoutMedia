@@ -2,15 +2,17 @@
 app.DefaultViewModel = (function (ko, db) {
     'use strict';
     var me = {
-        catalog: [],
+        catalog: ko.observableArray([]),
         init: init
     };
 
     function init() {
         db.getCatalog(function (data) {
+            var arrMedia = [];
             ko.utils.arrayForEach(data || [], function (item) {
-                me.catalog.push(new app.Media(item.ISBN, item.MediaType, item.Name));
+                arrMedia.push(new app.Media(item.ISBN, item.MediaType, item.Name));
             });
+            me.catalog(arrMedia);
         });
     }
     return me;
