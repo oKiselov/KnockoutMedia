@@ -7,6 +7,9 @@ app.DataBindingViewModel = (function (ko) {
         color: ko.observable(''),
         colors: ["Red", "Green", "Blue", "Yellow", "Black", "White"],
         isChecked: ko.observable(false),
+        isEnabled: ko.observable(true),
+        isDisabled: ko.observable(true),
+        isFocused: ko.observable(false),
         keyValuePair: ko.observable(undefined),
         keyValuePairs: [{ Key: "First", Value: "1" }, { Key: "Second", Value: "2" }, { Key: "Third", Value: "3" }, { Key: "Fourth", Value: "4" }],
         ordinal: ko.observable(undefined),
@@ -17,6 +20,7 @@ app.DataBindingViewModel = (function (ko) {
         me.message.subscribe(function (v) {
             //alert("Your message is: " + v);
         });
+        me.isFocused(true);
     }
 
     function loadMessage() {
