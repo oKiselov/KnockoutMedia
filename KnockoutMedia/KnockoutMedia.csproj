@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="data-binding.html" />
     <Content Include="default.html" />
     <Content Include="Scripts\DataContext.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
@@ -91,6 +92,7 @@
     <Content Include="Scripts\knockout-3.4.2.debug.js" />
     <Content Include="Scripts\knockout-3.4.2.js" />
     <Content Include="Scripts\Models\Media.js" />
+    <Content Include="Scripts\ViewModels\DataBindingViewModel.js" />
     <Content Include="Scripts\ViewModels\DefaultViewModel.js" />
     <Content Include="Web.config" />
   </ItemGroup>
