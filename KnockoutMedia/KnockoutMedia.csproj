@@ -67,9 +67,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="borrowers.html" />
+    <Content Include="composition.html" />
     <Content Include="Data\Borrowers.json" />
     <Content Include="Data\MediaTypes.json" />
+    <Content Include="external-template-books.html" />
+    <Content Include="external-template-magazines.html" />
+    <Content Include="multiple-apply-bindings.html" />
+    <Content Include="Scripts\ViewModels\CompositionViewModel.js" />
+    <Content Include="Scripts\ViewModels\TemplateViewModel.js" />
     <Content Include="Scripts\ViewModels\WithViewModel.js" />
+    <Content Include="template.html" />
+    <Content Include="Templates\borrower-table.html" />
+    <Content Include="Templates\media-table.html" />
     <Content Include="with.html" />
     <None Include="packages.config" />
     <Content Include="data-binding.html" />
