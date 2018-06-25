@@ -4,6 +4,3 @@ app.Borrower = function (name, email) {
     this.Name = ko.observable(name);
     this.Email = ko.observable(email);
 };
-app.Borrower.prototype.toString = function () {
-    return this.Name() + " [" + this.Email() + "]";
-};
