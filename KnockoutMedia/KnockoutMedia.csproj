@@ -69,9 +69,12 @@
     <Content Include="borrowers.html" />
     <Content Include="Data\Borrowers.json" />
     <Content Include="Data\MediaTypes.json" />
+    <Content Include="Scripts\ViewModels\WithViewModel.js" />
+    <Content Include="with.html" />
     <None Include="packages.config" />
     <Content Include="data-binding.html" />
     <Content Include="default.html" />
+    <Content Include="foreach.html" />
     <Content Include="media.html" />
     <Content Include="Scripts\DataContext.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
@@ -100,6 +103,7 @@
     <Content Include="Scripts\ViewModels\BorrowerViewModel.js" />
     <Content Include="Scripts\ViewModels\DataBindingViewModel.js" />
     <Content Include="Scripts\ViewModels\DefaultViewModel.js" />
+    <Content Include="Scripts\ViewModels\ForeachViewModel.js" />
     <Content Include="Scripts\ViewModels\MediaViewModel.js" />
     <Content Include="Web.config" />
   </ItemGroup>
