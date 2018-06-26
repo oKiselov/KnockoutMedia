@@ -68,12 +68,15 @@
   <ItemGroup>
     <Content Include="borrowers.html" />
     <Content Include="composition.html" />
+    <Content Include="custom-function.html" />
     <Content Include="Data\Borrowers.json" />
     <Content Include="Data\MediaTypes.json" />
     <Content Include="external-template-books.html" />
     <Content Include="external-template-magazines.html" />
     <Content Include="multiple-apply-bindings.html" />
+    <Content Include="Scripts\knockout-extensions.js" />
     <Content Include="Scripts\ViewModels\CompositionViewModel.js" />
+    <Content Include="Scripts\ViewModels\CustomFunctionViewModel.js" />
     <Content Include="Scripts\ViewModels\SubscribeViewModel.js" />
     <Content Include="Scripts\ViewModels\TemplateViewModel.js" />
     <Content Include="Scripts\ViewModels\WithViewModel.js" />
