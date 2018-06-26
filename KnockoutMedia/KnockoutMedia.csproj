@@ -74,8 +74,10 @@
     <Content Include="external-template-magazines.html" />
     <Content Include="multiple-apply-bindings.html" />
     <Content Include="Scripts\ViewModels\CompositionViewModel.js" />
+    <Content Include="Scripts\ViewModels\SubscribeViewModel.js" />
     <Content Include="Scripts\ViewModels\TemplateViewModel.js" />
     <Content Include="Scripts\ViewModels\WithViewModel.js" />
+    <Content Include="subscribe.html" />
     <Content Include="template.html" />
     <Content Include="Templates\borrower-table.html" />
     <Content Include="Templates\media-table.html" />
